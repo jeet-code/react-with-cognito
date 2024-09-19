@@ -14,25 +14,14 @@ function App() {
         <Authenticator>
           {({ signOut }) => (
             <div className="auth-container">
-              {/* Replaced the header section with the new code */}
-              <header className="App-header" style={{
-                backgroundColor: '#282c34', 
-                minHeight: '100vh', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                color: 'white', 
-                textAlign: 'center'
-              }}>
+              <header className="App-header" style={{ backgroundColor: '#282c34', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center' }}>
                 <h1 style={{ fontSize: '4rem', color: '#61dafb' }}>Welcome Cloud Guru</h1>
-                <p style={{ fontSize: '1.5rem', margin: '20px 0' }}>
-                  Explore the world of cloud computing with these resources:
-                </p>
+                <p style={{ fontSize: '1.5rem', margin: '20px 0' }}>Explore the world of cloud computing with these resources:</p>
+                
                 <nav style={{ marginTop: '30px' }}>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ margin: '10px 0' }}>
-                      <a
+                      <a 
                         className="App-link"
                         href="https://github.com/jeet-code"
                         target="_blank"
@@ -43,7 +32,7 @@ function App() {
                       </a>
                     </li>
                     <li style={{ margin: '10px 0' }}>
-                      <a
+                      <a 
                         className="App-link"
                         href="https://infraboy.hashnode.dev/series/aws"
                         target="_blank"
@@ -54,7 +43,7 @@ function App() {
                       </a>
                     </li>
                     <li style={{ margin: '10px 0' }}>
-                      <a
+                      <a 
                         className="App-link"
                         href="https://www.youtube.com/@cloudguru2023"
                         target="_blank"
@@ -67,11 +56,13 @@ function App() {
                   </ul>
                 </nav>
               </header>
+              
               <main>
                 <p>You are logged in!</p>
                 <button
                   onClick={signOut}
                   className="sign-out-button"
+                  style={{ marginTop: '20px', padding: '10px 20px', fontSize: '1rem', cursor: 'pointer' }}
                 >
                   Log Out
                 </button>
@@ -85,3 +76,8 @@ function App() {
 }
 
 export default App;
+#after this if not works thn run only -- > 
+  npm install aws-amplify
+npm install @aws-amplify/ui-react
+npm start
+
